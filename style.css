@@ -60,6 +60,13 @@ h1 {
   font-size: 24px;
 }
 
+/* Style pour le texte qui s'affiche */
+#messageDisplay {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  width: 75%;
+}
 
 /* Styles pour le bouton de génération de message */
 .button-39 {
