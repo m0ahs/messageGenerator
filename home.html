@@ -1,22 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles.css" />
-        <title>My Website</title>
-    </head>
-    <body>
-        <header>
-            <h1>Welcome to My Website</h1>
-        </header>
-        <main>
-            <p>This is a basic HTML page.</p>
-        </main>
-        <footer>
-            <p>&copy; 2022 My Website</p>
-        </footer>
-        <script src="script.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Message Generator</title>
+  </head>
+  <body>
+    <header>
+      <h1>Message Generator</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Generar un message</h2>
+        <button id="generateButton">Générer un message</button>
+        <div id="messageContainer"></div>
+      </section>
+      <section>
+        <h2>Options</h2>
+        <div>
+          <label>
+            <input type="radio" name="messageType" value="astrology" checked />
+            Prédictions astrologiques
+          </label>
+          <label>
+            <input type="radio" name="messageType" value="inspiring" />
+            Citations inspirantes
+          </label>
+          <label>
+            <input type="radio" name="messageType" value="jokes" />
+            Blagues
+          </label>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Message Generator</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
