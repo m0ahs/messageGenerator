@@ -1,17 +1,26 @@
-/* CSS universel */
+/* Réinitialisation CSS pour assurer la cohérence entre les navigateurs */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Styles de base pour html et body pour centrer le contenu */
 html,
 body {
-  height: 100%;
-  /* Assure que le body prend toute la hauteur */
+  height: 100%; /* Assure que le body prend toute la hauteur */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Conteneur principal pour les éléments de contenu */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5vh;
 }
 
 /* Styles pour la boîte de message */
@@ -20,31 +29,37 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+}
+
+/* Boîte contenant le message généré */
+.message-text-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 50vh;
   height: 50vh;
   background-color: white;
   border-radius: 12px;
   box-sizing: border-box;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 2px;
+  margin: 24px 20px;
 }
 
+/* Styles pour les titres et paragraphes à l'intérieur de .message-box */
 .message-box h1,
 .message-box p {
-  color: #000;
-  /* Couleur du texte */
-  margin-bottom: 24px;
-  /* Espace sous les titres et paragraphes */
+  color: #000; /* Couleur du texte */
 }
 
-/* Style pour le H1 */
+/* Style spécifique pour les titres h1 */
 h1 {
   color: #000;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
 }
 
 
-/* Styles pour le bouton */
+/* Styles pour le bouton de génération de message */
 .button-39 {
   background-color: #FFFFFF;
   border: 1px solid rgb(209,213,219);
@@ -64,34 +79,48 @@ h1 {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-}
-
-.button-39:hover {
-  background-color: rgb(249,250,251);
-}
-
-.button-39:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.button-39:focus-visible {
-  box-shadow: none;
+  margin-top: 20px;
 }
 
 
-/* Responsive */
+/* Styles pour rendre la boîte de message réactive pour les petits écrans */
 @media (max-width: 768px) {
-  .message-box {
-    padding: 10px;
+  .message-text-box {
     width: 50vh;
     height: 50vh;
+    margin: 24px 20px; /* Adjust margin for spacing on the sides */
   }
-
   .message-box h1 {
     font-size: 20px;
   }
-
+  .message-box button {
+    padding: 5px 10px;
+  }
+}
+/* Styles pour les petits écrans en mode portrait */
+@media (max-width: 768px) and (orientation: portrait) {
+  .message-text-box {
+    width: 50vh;
+    height: 50vh;
+    margin: 20px 20px;  /* Adjust margin for spacing on the sides */
+  }
+  .message-box h1 {
+    font-size: 20px;
+  }
+  .message-box button {
+    padding: 5px 10px;
+  }
+}
+/* Styles pour les petits écrans en mode paysage */
+@media (max-width: 768px) and (orientation: landscape) {
+  .message-text-box {
+    width: 40vh;
+    height: 40vh;
+    margin: 24px 20px; /* Adjust margin for spacing on the sides */
+  }
+  .message-box h1 {
+    font-size: 20px;
+  }
   .message-box button {
     padding: 5px 10px;
   }
