@@ -8,7 +8,8 @@
 /* Styles de base pour html et body pour centrer le contenu */
 html,
 body {
-  height: 100%; /* Assure que le body prend toute la hauteur */
+  height: 100%;
+  /* Assure que le body prend toute la hauteur */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +33,7 @@ main {
 }
 
 /* Boîte contenant le message généré */
-.message-text-box{
+.message-text-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,7 +50,8 @@ main {
 /* Styles pour les titres et paragraphes à l'intérieur de .message-box */
 .message-box h1,
 .message-box p {
-  color: #000; /* Couleur du texte */
+  color: #000;
+  /* Couleur du texte */
 }
 
 /* Style spécifique pour les titres h1 */
@@ -62,11 +64,11 @@ h1 {
 /* Styles pour le bouton de génération de message */
 .button-39 {
   background-color: #FFFFFF;
-  border: 1px solid rgb(209,213,219);
+  border: 1px solid rgb(209, 213, 219);
   border-radius: .5rem;
   box-sizing: border-box;
   color: #111827;
-  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: .875rem;
   font-weight: 600;
   line-height: 1.25rem;
@@ -83,45 +85,67 @@ h1 {
 }
 
 
-/* Styles pour rendre la boîte de message réactive pour les petits écrans */
-@media (max-width: 768px) {
-  .message-text-box {
-    width: 50vh;
-    height: 50vh;
-    margin: 24px 20px; /* Adjust margin for spacing on the sides */
+/* Styles pour les écrans très petits (mobiles) */
+@media screen and (max-width: 767px) {
+  main {
+    margin-bottom: 3vh;
   }
+
+  .message-text-box {
+    width: 40vw;
+    height: 40vw;
+  }
+
   .message-box h1 {
     font-size: 20px;
   }
+
   .message-box button {
     padding: 5px 10px;
   }
 }
-/* Styles pour les petits écrans en mode portrait */
-@media (max-width: 768px) and (orientation: portrait) {
+
+/* Styles pour les tablettes et petits écrans d'ordinateur */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .message-text-box {
-    width: 50vh;
-    height: 50vh;
-    margin: 20px 20px;  /* Adjust margin for spacing on the sides */
+    width: 35vw;
+    height: 35vw;
+    margin: 20px auto;
   }
+  
   .message-box h1 {
-    font-size: 20px;
-  }
-  .message-box button {
-    padding: 5px 10px;
+    font-size: 22px;
   }
 }
-/* Styles pour les petits écrans en mode paysage */
-@media (max-width: 768px) and (orientation: landscape) {
+
+/* Styles pour les ordinateurs de bureau moyens */
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  main {
+    margin-bottom: 5vh;
+  }
+  
   .message-text-box {
-    width: 40vh;
-    height: 40vh;
-    margin: 24px 20px; /* Adjust margin for spacing on the sides */
+    width: 30vw;
+    height: 30vw;
   }
+
   .message-box h1 {
-    font-size: 20px;
+    font-size: 24px;
   }
-  .message-box button {
-    padding: 5px 10px;
+}
+
+/* Styles pour les grands écrans d'ordinateur */
+@media screen and (min-width: 1280px) {
+  main {
+    margin-bottom: 6vh;
+  }
+
+  .message-box h1 {
+    color: red;
+  }
+  
+  .message-text-box {
+    width: 30vw;
+    height: 30vw;
   }
 }
