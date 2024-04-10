@@ -51,28 +51,28 @@ main {
 .message-box h1,
 .message-box p {
   color: #000;
-  /* Couleur du texte */
 }
 
 /* Style spécifique pour les titres h1 */
 h1 {
   color: #000;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 24px;
 }
 
 
 /* Styles pour le bouton de génération de message */
 .button-39 {
   background-color: #FFFFFF;
-  border: 1px solid rgb(209, 213, 219);
+  border: 1px solid rgb(209,213,219);
   border-radius: .5rem;
   box-sizing: border-box;
   color: #111827;
-  font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: .875rem;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
   font-weight: 600;
-  line-height: 1.25rem;
-  padding: .75rem 1rem;
+  line-height: 1.5rem;
+  margin-top: .75rem;
   text-align: center;
   text-decoration: none #D1D5DB solid;
   text-decoration-thickness: auto;
@@ -81,7 +81,19 @@ h1 {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  margin-top: 20px;
+}
+
+.button-39:hover {
+  background-color: rgb(249,250,251);
+}
+
+.button-39:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button-39:focus-visible {
+  box-shadow: none;
 }
 
 
@@ -92,8 +104,8 @@ h1 {
   }
 
   .message-text-box {
-    width: 40vw;
-    height: 40vw;
+    width: 50vh;
+    height: 50vh;
   }
 
   .message-box h1 {
@@ -101,22 +113,30 @@ h1 {
   }
 
   .message-box button {
-    padding: 5px 10px;
+    font-size: .8rem;
+    padding: .5rem;
   }
 }
+
 
 /* Styles pour les tablettes et petits écrans d'ordinateur */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .message-text-box {
-    width: 35vw;
-    height: 35vw;
+    width: 50vh;
+    height: 50vh;
     margin: 20px auto;
   }
   
   .message-box h1 {
     font-size: 22px;
   }
+
+  .message-box button {
+    font-size: .8rem;
+    padding: .5rem;
+  }
 }
+
 
 /* Styles pour les ordinateurs de bureau moyens */
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
@@ -125,27 +145,34 @@ h1 {
   }
   
   .message-text-box {
-    width: 30vw;
-    height: 30vw;
+    width: 50vh;
+    height: 50vh;
   }
 
   .message-box h1 {
     font-size: 24px;
   }
+
+  .message-box button {
+    font-size: .8rem;
+    padding: .5rem;
+  }
 }
+
 
 /* Styles pour les grands écrans d'ordinateur */
 @media screen and (min-width: 1280px) {
   main {
     margin-bottom: 6vh;
   }
-
-  .message-box h1 {
-    color: red;
-  }
   
   .message-text-box {
-    width: 30vw;
-    height: 30vw;
+    width: 50vh;
+    height: 50vh;
+  }
+
+  .message-box button {
+    font-size: .8rem;
+    padding: .5rem;
   }
 }
