@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,36 +8,12 @@
     <title>Message Generator</title>
   </head>
   <body>
-    <header>
-      <h1>Message Generator</h1>
-    </header>
     <main>
-      <section>
-        <h2>Generar un message</h2>
-        <button id="generateButton">Générer un message</button>
-        <div id="messageContainer"></div>
-      </section>
-      <section>
-        <h2>Options</h2>
-        <div>
-          <label>
-            <input type="radio" name="messageType" value="astrology" checked />
-            Prédictions astrologiques
-          </label>
-          <label>
-            <input type="radio" name="messageType" value="inspiring" />
-            Citations inspirantes
-          </label>
-          <label>
-            <input type="radio" name="messageType" value="jokes" />
-            Blagues
-          </label>
-        </div>
-      </section>
+      <div class="message-box">
+        <h1>Message Generator</h1>
+        <button class="button-39" role="button" onclick="generateMessage()">Generate Message</button>
+      </div>
     </main>
-    <footer>
-      <p>&copy; 2024 Message Generator</p>
-    </footer>
     <script src="script.js"></script>
   </body>
 </html>
