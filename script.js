@@ -80,19 +80,18 @@ const techFacts = [
     },
 ];
 
+// Fonction pour générer un message aléatoire
 function generateMessage() {
+
     // Logique pour sélectionner un message aléatoire
-    // Puis mettre à jour le contenu de .message-content avec ce message
+    const randomIndex = Math.floor(Math.random() * techFacts.length);
+    
+    const message = techFacts[randomIndex].fact;
+
+    // Sélectionne l'élément du DOM où le message doit être affiché
+    const messageDisplayElement = document.getElementById('messageDisplay');
+
+    // Affiche le contenu sur la page d'accueil
+    messageDisplayElement.textContent = message;
 }
 
-
-
-
-// Supposons que tu veuilles afficher ce message
-const message = "Hello World";
-
-// Sélectionne l'élément du DOM où le message doit être affiché
-const messageDisplayElement = document.getElementById('messageDisplay');
-
-// Modifie le contenu de cet élément pour inclure le message
-messageDisplayElement.textContent = message;
