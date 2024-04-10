@@ -102,10 +102,14 @@ h1 {
   main {
     margin-bottom: 3vh;
   }
-
+  
   .message-text-box {
     width: 50vh;
     height: 50vh;
+  }
+
+  .message-box {
+    width: 100%;
   }
 
   .message-box h1 {
@@ -125,6 +129,10 @@ h1 {
     width: 50vh;
     height: 50vh;
     margin: 20px auto;
+  }
+
+  .message-box {
+    width: 100%;
   }
   
   .message-box h1 {
@@ -149,6 +157,10 @@ h1 {
     height: 50vh;
   }
 
+  .message-box {
+    width: 100%;
+  }
+  
   .message-box h1 {
     font-size: 24px;
   }
@@ -164,6 +176,10 @@ h1 {
 @media screen and (min-width: 1280px) {
   main {
     margin-bottom: 6vh;
+  }
+
+  .message-box {
+    width: 100%;
   }
   
   .message-text-box {
