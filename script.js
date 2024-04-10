@@ -93,5 +93,23 @@ function generateMessage() {
 
     // Affiche le contenu sur la page d'accueil
     messageDisplayElement.textContent = message;
+
+    // Lancer les confettis après avoir affiché le message
+    launchConfetti();
 }
 
+// Appeler generateMessage() lorsque le bouton est cliqué
+document.addEventListener('DOMContentLoaded', (event) => {
+    const button = document.querySelector('.button-39');
+    button.addEventListener('click', generateMessage);
+});
+
+
+// Fonction pour lancer les confettis
+function launchConfetti() {
+    confetti({
+        particleCount: 100, // Nombre de confettis
+        spread: 70, // Angle de dispersion
+        origin: { y: 0.45 } // Position d'origine des confettis
+    });
+}
