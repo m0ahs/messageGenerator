@@ -92,7 +92,7 @@ function generateMessage() {
     const messageDisplayElement = document.getElementById('messageDisplay');
 
     // Affiche le contenu sur la page d'accueil
-    messageDisplayElement.textContent = message;
+    messageDisplayElement.innerText = message;
 
     // Lancer les confettis après avoir affiché le message
     launchConfetti();
